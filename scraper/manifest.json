@@ -1,0 +1,53 @@
+{
+
+  "name": "TikTok - Stream Scraping Client",
+  "description": "Stream scraping client for TikTok",
+  "author": "Isaac Kogan",
+  "homepage_url": "https://github.com/isaackogan",
+
+  "manifest_version": 3,
+  "version": "0.1",
+
+  "content_scripts": [
+    {
+      "css": [
+      ],
+      "js": [
+
+        "javascript/libraries/jquery-2.1.1.min.js",
+
+        "javascript/main.js",
+        "javascript/api/manage.js",
+
+        "javascript/scraping/data-scraper.js",
+        "javascript/scraping/chat-scraper.js",
+
+        "javascript/utilities/logger.js",
+        "javascript/utilities/utilities.js"
+
+      ],
+      "matches": [
+        "*://*.tiktok.com/*"
+      ]
+    }
+  ],
+
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "/javascript/themes/types/*",
+        "/css/*",
+        "/fonts/*",
+        "/images/*",
+        "/html/*",
+        "/javascript/automation/web-accessible-scripts/*",
+        "/javascript/automation/web-filtering/*"
+      ],
+      "matches": ["*://*.tiktok.com/*"]
+    }
+  ],
+
+  "incognito": "split",
+  "permissions": ["storage"],
+  "externally_connectable": {"matches": ["*://*.tiktok.com/*"]}
+}
