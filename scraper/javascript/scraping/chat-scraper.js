@@ -120,11 +120,8 @@ const MessageParser = {
         if (element.getAttribute("data-testid")) {
             let messageType = element.getAttribute("data-testid");
 
-            // Join Message
-            if (messageType === "enter-message") messageData = MessageParser.parseJoinMessage(element);
-
             // Chat Message
-            else if (messageType === "chat-message") messageData = MessageParser.parseChatMessage(element);
+            if (messageType === "chat-message") messageData = MessageParser.parseChatMessage(element);
 
             // Social Message
             else if (messageType === "social-message") messageData = MessageParser.parseSocialMessage(element);

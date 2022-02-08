@@ -19,8 +19,4 @@ document.addEventListener("streamLoaded", (event) => {
 
     updater.start();
 
-    /*
-    TODO: Find out why join event is firing twice for some users
-    TODO: REMOVE API MIDDLEWARE -> Go straight to api from here LOL
-     */
 })

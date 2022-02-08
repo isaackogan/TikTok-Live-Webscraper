@@ -1,6 +1,5 @@
-from discord import Webhook, RequestsWebhookAdapter
 from TikTokStream.ext.bot import Bot
-from TikTokStream.ext.struct import Message, Join, EventListener, Gift, SocialUpdate
+from TikTokStream.ext.struct import Message, EventListener, Gift
 
 bot: Bot = Bot()
 
